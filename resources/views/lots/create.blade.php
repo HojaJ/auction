@@ -17,7 +17,9 @@
                             id="lot-title"
                             name="title"
                             class="w-full h-10 px-3 mb-2 text-base text-gray-700 placeholder-gray-400 border rounded-lg focus:shadow-outline"
-                            type="text"/>
+                            type="text"
+                            required
+                        />
                         <label class="block mb-1" for="lot-description">Lot description</label>
                         <div class="w-full">
                             <textarea
@@ -28,7 +30,7 @@
                         </div>
                         <label for="category" class="mt-2">Select category</label>
                         <select id="category" name="category"
-                                class="w-full h-10 mb-2 mt-1 pl-3 pr-5 placeholder-gray-600 border rounded-lg appearance-none focus:shadow-outline" placeholder="Regular input">--}}
+                                class="w-full h-10 mb-2 mt-1 pl-3 pr-5 placeholder-gray-600 border rounded-lg appearance-none focus:shadow-outline" placeholder="Regular input" required>
                             @foreach($categories as $category)
                                 <option value="{{$category->id}}">{{$category->name}}</option>
                             @endforeach

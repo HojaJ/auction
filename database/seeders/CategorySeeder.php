@@ -14,9 +14,12 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        Category::factory()->create([
-            'name' => 'Other'
+        Category::insert([
+            ['name' => 'Miscellaneous'],
+            ['name' => 'Computers'],
+            ['name' => 'Furniture'],
+            ['name' => 'Vehicle'],
         ]);
-        Category::factory(2)->create();
+
     }
 }

@@ -2,17 +2,16 @@
 
 namespace App\Services\Lot;
 
-use App\Http\Requests\StoreLotRequest;
 use App\Models\Lot;
 use App\Models\LotImage;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Mews\Purifier\Facades\Purifier;
 
 class StoreService
 {
-    private StoreLotRequest $request;
 
-    public function __construct(StoreLotRequest $request)
+    public function __construct(Request $request)
     {
         $this->request = $request;
     }
