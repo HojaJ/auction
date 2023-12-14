@@ -24,6 +24,9 @@
                                     <th class="px-6 py-3 text-left font-medium text-gray-500">
                                         Email
                                     </th>
+                                    <th class="px-6 py-3 text-left font-medium text-gray-500">
+                                        Balance
+                                    </th>
                                     <th class="px-6 py-3"></th>
                                 </tr>
                                 </thead>
@@ -54,6 +57,9 @@
                                     </td>
                                     <td class="px-6 py-3">
                                         <div class="text-sm text-gray-900">{{ $user->email }}</div>
+                                    </td>
+                                    <td class="px-6 py-3">
+                                        <div class="text-sm text-gray-900">{{ $user->balance }}</div>
                                     </td>
                                     <td class="px-6 py-3">
                                         <a

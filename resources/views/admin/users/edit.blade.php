@@ -34,6 +34,13 @@
                             class="w-full h-10 px-3 mb-2 text-base text-gray-700 border rounded-lg focus:shadow-outline"
                             type="text"
                             value="{{ $user->email }}"/>
+                        <label for="balance">Balance</label>
+                        <input
+                                id="balance"
+                                name="balance"
+                                class="w-full h-10 px-3 mb-2 text-base text-gray-700 border rounded-lg focus:shadow-outline"
+                                type="number"
+                                value="{{ $user->balance }}"/>
                         @isset($user->photo)
                             <img class="w-10 h-10 rounded-full object-cover"
                                  src="{{ asset('/storage/' . $user->photo) }}">

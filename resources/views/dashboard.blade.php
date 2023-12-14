@@ -20,14 +20,15 @@
                     bg-yellow-500 rounded-lg focus:shadow-outline hover:bg-yellow-600">
                         Edit profile
                     </a>
-                    <a
-                        href="{{ route('profile.addMoney') }}"
-                        class="flex justify-center items-center h-10 w-40 px-5 mt-3 mr-5 text-gray-100 transition-colors duration-200
-                    bg-green-500 rounded-lg focus:shadow-outline hover:bg-green-600">
-                        Top up balance
-                    </a>
 
                     @if(auth()->user()->type===1)
+{{--                        <a--}}
+{{--                                href="{{ route('profile.addMoney') }}"--}}
+{{--                                class="flex justify-center items-center h-10 w-40 px-5 mt-3 mr-5 text-gray-100 transition-colors duration-200--}}
+{{--                    bg-green-500 rounded-lg focus:shadow-outline hover:bg-green-600">--}}
+{{--                            Top up balance--}}
+{{--                        </a>--}}
+
                         <div class="flex">
                             <a href="{{ route('admin.users.index') }}" class="flex justify-center items-center h-10 w-40 px-5 mt-3 mr-5 text-gray-100 transition-colors duration-200 bg-gray-500 rounded-lg focus:shadow-outline hover:bg-gray-600">
                                 Show all users
