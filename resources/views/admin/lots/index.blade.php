@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Lots') }}
+{{--            {{ __('Lots') }}--}}
         </h2>
     </x-slot>
 
@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    @include('layouts.success-message')
+{{--                    @include('layouts.success-message')--}}
                     <div class="mb-5 py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                         <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                             <table class="min-w-full divide-y divide-gray-200">
@@ -45,7 +45,7 @@
                                         </td>
                                         <td class="px-6 py-3">
                                             <div class="text-sm text-gray-900">
-                                                {{ $lot->category->name }}
+                                                {{ $lot->category?->name }}
                                             </div>
                                         </td>
                                         <td class="px-6 py-3">

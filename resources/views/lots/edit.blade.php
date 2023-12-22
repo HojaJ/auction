@@ -32,7 +32,7 @@
                                 class="w-full h-10 mb-2 mt-1 pl-3 pr-5 placeholder-gray-600 border rounded-lg appearance-none focus:shadow-outline" placeholder="Regular input">--}}
                             @foreach($categories as $category)
                                 <option value="{{$category->id}}"
-                                    @if($category->id === $lot->category->id)
+                                    @if($category->id === $lot->category?->id)
                                         selected
                                     @endif>{{$category->name}}</option>
                             @endforeach
