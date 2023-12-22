@@ -52,7 +52,7 @@ export default {
                 })
         },
         declension() {
-            return this.uniqueBids === 1 ? ' bid' : ' bids'
+            return this.uniqueBids === 1 ? this.$t(' bid')  : this.$t(' bids')
         },
     }
 }

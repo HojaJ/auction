@@ -59,7 +59,7 @@
                             />
                         </div>
                         <button type="submit" class="flex justify-center items-center h-10 w-32 px-5 mt-3 mr-5 text-gray-100 transition-colors duration-200
-                    bg-green-500 rounded-lg focus:shadow-outline hover:bg-green-600">Save profile</button>
+                    bg-green-500 rounded-lg focus:shadow-outline hover:bg-green-600">{{ __('Save') }}</button>
                     </form>
                 </div>
             </div>

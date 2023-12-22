@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Edit profile') }}
+            {{ __('Edit') }}
         </h2>
     </x-slot>
 
@@ -13,7 +13,7 @@
                     <form action="{{ route('profile.update', Auth::id()) }}" method="post" enctype="multipart/form-data">
                         @csrf
                         @method('PATCH')
-                        <label for="name">Name</label>
+                        <label for="name">{{ __('Name') }}</label>
                         <input
                             id="name"
                             name="name"
@@ -22,20 +22,20 @@
                             value="{{ Auth::user()->name }}"/>
                         <x-avatar/>
                         @isset(Auth::user()->photo)
-                            <label for="delete_photo">Delete photo</label>
+                            <label for="delete_photo">{{ __('Delete photo') }}</label>
                             <input name="delete_photo" type="checkbox"/>
                         @endisset
                         <div class="flex flex-col">
-                            <label for="photo">Upload profile photo</label>
+                            <label for="photo">{{ __('Upload photo') }}</label>
                             <input
                                 id="photo"
                                 name="photo"
-                                class="h-10 px-3 my-2 text-base text-gray-700 focus:shadow-outline"
+                                class="h-10 my-2 text-base text-gray-700 focus:shadow-outline"
                                 type="file"
                             />
                         </div>
                         <button type="submit" class="flex justify-center items-center h-10 w-32 px-5 mt-3 mr-5 text-gray-100 transition-colors duration-200
-                    bg-green-500 rounded-lg focus:shadow-outline hover:bg-green-600">Save profile</button>
+                    bg-green-500 rounded-lg focus:shadow-outline hover:bg-green-600">{{ __('Save') }}</button>
                     </form>
                 </div>
             </div>

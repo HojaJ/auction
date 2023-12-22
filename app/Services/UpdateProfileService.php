@@ -38,6 +38,8 @@ class UpdateProfileService
         $this->user->save();
     }
 
+
+
     /**
      * Delete user photo from storage.
      */

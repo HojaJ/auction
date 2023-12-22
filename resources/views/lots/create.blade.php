@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Create new lot
+            {{ __("Create lot") }}
         </h2>
     </x-slot>
 
@@ -12,7 +12,7 @@
                     @include('layouts.errors-message')
                     <form class="flex flex-wrap" method="post" action="{{route('lots.store')}}" enctype="multipart/form-data">
                         @csrf
-                        <label class="block mb-1" for="lot-title">Lot name</label>
+                        <label class="block mb-1" for="lot-title">{{ __("Name") }}</label>
                         <input
                             id="lot-title"
                             name="title"
@@ -20,7 +20,7 @@
                             type="text"
                             required
                         />
-                        <label class="block mb-1" for="lot-description">Lot description</label>
+                        <label class="block mb-1" for="lot-description">{{ __("Description") }}</label>
                         <div class="w-full">
                             <textarea
                                 id="lot-description"
@@ -28,14 +28,14 @@
                                 class="form-textarea my-2 block w-full rounded-lg placeholder-gray-400"
                                 rows="3"></textarea>
                         </div>
-                        <label for="category" class="mt-2">Select category</label>
+                        <label for="category" class="mt-2">{{__('Select category')}}</label>
                         <select id="category" name="category"
                                 class="w-full h-10 mb-2 mt-1 pl-3 pr-5 placeholder-gray-600 border rounded-lg appearance-none focus:shadow-outline" placeholder="Regular input" required>
                             @foreach($categories as $category)
                                 <option value="{{$category->id}}">{{$category->name}}</option>
                             @endforeach
                         </select>
-                        <label class="block mb-1" for="lot-price">Start price</label>
+                        <label class="block mb-1" for="lot-price">{{ __('Start price') }}</label>
                         <input
                             id="lot-price"
                             name="price"
@@ -43,7 +43,7 @@
                             type="number"
                             min="0"
                             value="0"/>
-                        <label class="block mb-1" for="lot-image">Lot image</label>
+                        <label class="block mb-1" for="lot-image">{{__('Image')}}</label>
                         <input
                             id="lot-image"
                             name="image[]"
@@ -55,15 +55,15 @@
                             <input
                                 id="sale-lot"
                                 name="for_sale"
-                                class="form-checkbox h-5 w-5 text-gray-600 focus:ring-transparent"
+                                class="form-checkbox h-5 w-5 mr-3 text-gray-600 focus:ring-transparent"
                                 type="checkbox"/>
-                            <label for="sale-lot" class="inline-flex items-center">Put up for sale</label>
+                            <label for="sale-lot" class="inline-flex items-center">{{ __('Put up for sale') }}</label>
                         </div>
                         <button
                             type="submit"
                             class="h-10 px-5 mt-3 text-gray-100 transition-colors duration-200
         bg-yellow-500 rounded-lg focus:shadow-outline hover:bg-yellow-600">
-                            Create
+                            {{ __('Create') }}
                         </button>
                     </form>
                 </div>

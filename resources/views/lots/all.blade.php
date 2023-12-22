@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            All Lots
+            {{ __('Lots') }}
         </h2>
     </x-slot>
 
@@ -38,7 +38,7 @@
                             <div>{{$lots->links()}}</div>
                         </div>
                     @else
-                        <p>You have not uploaded any lot.</p>
+                        <p>{{ __('You have no purchases') }}.</p>
                     @endif
                 </div>
             </div>

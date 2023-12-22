@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\LotsController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\HomeController;
@@ -18,6 +19,13 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('language/{locale}', function ($locale) {
+    app()->setLocale($locale);
+    session()->put('locale', $locale);
+
+    return redirect()->back();
+});
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -44,7 +52,8 @@ Route::middleware('auth')->group(function () {
         'as' => 'admin.',
         'middleware' => ['role:1']
     ], function () {
-        Route::resource('users', UsersController::class)->only('index', 'edit', 'update');
+        Route::resource('users', UsersController::class);
+        Route::resource('categories', CategoryController::class);
         Route::resource('lots', LotsController::class)->only('index', 'destroy');
     });
 

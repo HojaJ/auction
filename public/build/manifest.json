@@ -1,11 +1,31 @@
 {
+  "lang/en.json": {
+    "file": "assets/en-b25bb000.js",
+    "isDynamicEntry": true,
+    "src": "lang/en.json"
+  },
+  "lang/ru.json": {
+    "file": "assets/ru-823e69e3.js",
+    "isDynamicEntry": true,
+    "src": "lang/ru.json"
+  },
+  "lang/tm.json": {
+    "file": "assets/tm-f289f48f.js",
+    "isDynamicEntry": true,
+    "src": "lang/tm.json"
+  },
   "resources/css/app.css": {
-    "file": "assets/app-f55123bb.css",
+    "file": "assets/app-17068b59.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
   "resources/js/app.js": {
-    "file": "assets/app-9c2ba991.js",
+    "dynamicImports": [
+      "lang/en.json",
+      "lang/ru.json",
+      "lang/tm.json"
+    ],
+    "file": "assets/app-4733e2a0.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }

@@ -10,7 +10,7 @@
                   clip-rule="evenodd"/>
         </svg>
         <div v-if="sale">{{addZero(hours) }}:{{ addZero(minutes) }}:{{ addZero(seconds) }}</div>
-        <div v-else>Sold</div>
+        <div v-else>{{ $t("Sold") }}</div>
     </div>
 </template>
 

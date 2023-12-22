@@ -52,14 +52,14 @@
                                 type="submit"
                                 class="flex justify-center items-center h-10 w-28 px-5 mt-3 mr-5 text-gray-100 transition-colors duration-200
                     bg-yellow-500 rounded-lg focus:shadow-outline hover:bg-yellow-600">
-                                Edit
+                                {{ __('Edit') }}
                             </a>
                             <form action="{{ route('lots.destroy', $lot->id) }}" method="post">
                                 @csrf
                                 @method('DELETE')
                                 <button class="flex justify-center items-center h-10 w-28 px-5 mt-3 text-gray-100 transition-colors duration-200
                     bg-red-500 rounded-lg focus:shadow-outline hover:bg-red-600"
-                                        type="submit">Delete
+                                        type="submit">{{__('Delete')}}
                                 </button>
                             </form>
                         </div>

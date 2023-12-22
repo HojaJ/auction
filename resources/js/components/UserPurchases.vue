@@ -2,10 +2,10 @@
     <div class="text-sm">
         <div v-if="pagination.total > 0">
             <div class="grid grid-cols-4 px-2 py-3 font-semibold">
-                <span>Lot name</span>
-                <span>Seller</span>
-                <span>Price</span>
-                <span>Date</span>
+                <span>{{ $t("Lot name") }}</span>
+                <span>{{ $t("Seller") }}</span>
+                <span>{{ $t("Price") }}</span>
+                <span>{{ $t("Date") }}</span>
             </div>
             <div v-for="purchase in purchases" class="grid grid-cols-4 px-2 py-3 hover:bg-green-100">
                 <span>{{ purchase.lot_name }}</span>
@@ -37,7 +37,7 @@
             </div>
         </div>
         <div v-else>
-            You have no purchases.
+            {{ $t("You have no purchases") }}
         </div>
     </div>
 </template>

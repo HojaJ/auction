@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl text-center">
+        <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl text-center">
             {{ __('Active lots') }}
         </h2>
     </x-slot>
@@ -8,7 +8,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class=" overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 border-b border-gray-200">
+                <div >
                     <div class="container mx-auto">
                         @include('layouts.errors-message')
                         <div class="grid lg:grid-cols-3 sm:grid-cols-2 gap-4">
@@ -72,7 +72,7 @@
                         </div>
                         <div>{{ $lots->links() }}</div>
                         @else
-                            <div>No lots found.</div>
+                            <div>{{ __('No lots found') }}.</div>
                         @endif
                     </div>
                 </div>

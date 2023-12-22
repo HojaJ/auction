@@ -19,7 +19,9 @@
         "@vitejs/plugin-vue": "^4.5.0",
         "dotenv": "^16.3.1",
         "ioredis": "^5.3.2",
+        "laravel-vue-i18n": "^2.7.1",
         "vue": "^3.2.36",
+        "vue-i18n": "^9.8.0",
         "vue-loader": "^17.3.1"
     }
 }
