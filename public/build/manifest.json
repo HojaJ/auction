@@ -5,12 +5,12 @@
     "src": "lang/en.json"
   },
   "lang/ru.json": {
-    "file": "assets/ru-823e69e3.js",
+    "file": "assets/ru-eae861d4.js",
     "isDynamicEntry": true,
     "src": "lang/ru.json"
   },
   "lang/tm.json": {
-    "file": "assets/tm-f289f48f.js",
+    "file": "assets/tm-f621b225.js",
     "isDynamicEntry": true,
     "src": "lang/tm.json"
   },
@@ -25,7 +25,7 @@
       "lang/ru.json",
       "lang/tm.json"
     ],
-    "file": "assets/app-4733e2a0.js",
+    "file": "assets/app-5880e233.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }

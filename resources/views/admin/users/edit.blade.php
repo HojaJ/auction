@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Edit user') }}
+        <h2 class="font-semibold text-xl text-white leading-tight">
+            {{ __('Edit') }}
         </h2>
     </x-slot>
 
@@ -13,28 +13,28 @@
                     <form action="{{ route('admin.users.update', $user->id) }}" method="post" enctype="multipart/form-data">
                         @csrf
                         @method('PATCH')
-                        <label for="username">Username</label>
+                        <label for="username">{{__('Username')}}</label>
                         <input
                             id="username"
                             name="username"
                             class="w-full h-10 px-3 mb-2 text-base text-gray-700 border rounded-lg focus:shadow-outline"
                             type="text"
                             value="{{ $user->username }}"/>
-                        <label for="name">Name</label>
+                        <label for="name">{{__('Name')}}</label>
                         <input
                             id="name"
                             name="name"
                             class="w-full h-10 px-3 mb-2 text-base text-gray-700 border rounded-lg focus:shadow-outline"
                             type="text"
                             value="{{ $user->name }}"/>
-                        <label for="email">Email</label>
+                        <label for="email">{{__('Email')}}</label>
                         <input
                             id="email"
                             name="email"
                             class="w-full h-10 px-3 mb-2 text-base text-gray-700 border rounded-lg focus:shadow-outline"
                             type="text"
                             value="{{ $user->email }}"/>
-                        <label for="balance">Balance</label>
+                        <label for="balance">{{__('Balance')}}</label>
                         <input
                                 id="balance"
                                 name="balance"
@@ -44,17 +44,17 @@
                         @isset($user->photo)
                             <img class="w-10 h-10 rounded-full object-cover"
                                  src="{{ asset('/storage/' . $user->photo) }}">
-                            <label for="delete_photo">Delete photo</label>
+                            <label for="delete_photo">{{__('Delete photo')}}</label>
                             <input name="delete_photo" type="checkbox"/>
                         @else
                             {!! Avatar::create($user->name)->toSvg() !!}
                         @endisset
                         <div class="flex flex-col">
-                            <label for="photo">Upload profile photo</label>
+                            <label for="photo">{{ __('Upload profile photo') }}</label>
                             <input
                                 id="photo"
                                 name="photo"
-                                class="h-10 px-3 my-2 text-base text-gray-700 focus:shadow-outline"
+                                class="h-10 mt-2 text-base text-gray-700 focus:shadow-outline"
                                 type="file"
                             />
                         </div>

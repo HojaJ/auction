@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h2 class="font-semibold text-xl text-white leading-tight">
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
@@ -11,7 +11,7 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     @include('layouts.success-message')
                     <h3 class="mb-4 font-semibold text-lg text-gray-800 leading-tight">{{ __('You balance') }}:</h3>
-                    <div class="text-green-500 text-5xl my-2">${{ Auth::user()->balance }}</div>
+                    <div class="text-green-500 text-5xl my-2">{{ Auth::user()->balance }} TMT</div>
                     <h3 class="mb-4 font-semibold text-lg text-gray-800 leading-tight">{{ __('You purchases') }}:</h3>
                     <user-purchases></user-purchases>
                     <a

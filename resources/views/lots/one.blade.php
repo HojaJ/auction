@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h1 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h1 class="font-semibold text-xl text-white leading-tight">
             {{ $lot->name }}
         </h1>
     </x-slot>
@@ -13,7 +13,7 @@
                     @include('layouts.errors-message')
                     <div class="flex justify-between mb-3 mr-3">
                         <lot-status-badge class="px-2 py-1 text-xs h-5 font-bold leading-none rounded-full"
-                                    status="{{ $lot->status }}"></lot-status-badge>
+                                    status="{{ $lot->status_t }}"></lot-status-badge>
                         <div class="text-green-500 text-5xl">
                             <new-bid :lot="{{ $lot->id }}" :unique="{{ $lot->number_of_unique_bids }}"
                                      :bid="{{ $lot->start_price }}"></new-bid>
@@ -45,6 +45,7 @@
                     </div>
                     <div class="mb-7">{!! $lot->description !!}</div>
                     @include('layouts.lot-images')
+
                     @if($lot->user_id === Auth::id())
                         <div class="flex">
                             <a

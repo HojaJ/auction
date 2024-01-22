@@ -13,6 +13,8 @@ class Lot extends Model
     use HasFactory;
 
     protected $guarded = [];
+    protected $appends = ['status_t'];
+
 
     /**
      * Get the user that owns the lot.
@@ -57,6 +59,14 @@ class Lot extends Model
         if ($value === 'sold') return 'Sold';
         return 'Draft';
     }
+
+    public function getStatusTAttribute($value)
+    {
+        if ($this->status === 'On sale') return __('On sale');
+        if ($this->status === 'Sold') return __('Sold');
+        if ($this->status === 'Draft') return __('Draft');
+    }
+
 
     /**
      * Get lot sale timestamp.

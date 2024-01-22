@@ -2,13 +2,13 @@
     <x-slot name="header">
         <div class="flex justify-between">
 
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h2 class="font-semibold text-xl text-white leading-tight">
             {{ __('Users') }}
         </h2>
         <a href="{{route('admin.users.create')}}"
            class="flex justify-center items-center h-10 w-20 mr-2 text-gray-100 transition-colors duration-200
                 bg-green-500 rounded-lg focus:shadow-outline hover:bg-yellow-600">
-            New
+            {{ __('New') }}
         </a>
         </div>
     </x-slot>
@@ -24,16 +24,16 @@
                                 <thead class="bg-gray-50">
                                 <tr>
                                     <th class="px-6 py-3 text-left font-medium text-gray-500">
-                                        Username
+                                        {{__('Username')}}
                                     </th>
                                     <th class="px-6 py-3 text-left font-medium text-gray-500">
-                                        Name
+                                        {{__('Name')}}
                                     </th>
                                     <th class="px-6 py-3 text-left font-medium text-gray-500">
-                                        Email
+                                        {{__('Email')}}
                                     </th>
                                     <th class="px-6 py-3 text-left font-medium text-gray-500">
-                                        Balance
+                                        {{__('Balance')}}
                                     </th>
                                     <th class="px-6 py-3"></th>
                                 </tr>

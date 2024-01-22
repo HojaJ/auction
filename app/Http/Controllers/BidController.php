@@ -13,6 +13,6 @@ class BidController extends Controller
     public function store(MakeBidService $service)
     {
 //        event(new BidEvent($service->bid));
-        return back()->with('success', 'Your bid is accepted.');
+        return back()->with('success', __('Your bid is accepted'));
     }
 }

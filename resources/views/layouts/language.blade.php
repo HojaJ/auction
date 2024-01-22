@@ -3,9 +3,9 @@
         @csrf
         <label for="language-picker-select">Select your language</label>
         <select name="language-picker-select" id="language-picker-select" >
+            <option lang="lang" value="tm" @if($current_locale === 'tm') selected @endif >Tm</option>
             <option lang="lang" value="en" @if($current_locale === 'en') selected @endif>En</option>
             <option lang="lang" value="ru" @if($current_locale === 'ru') selected @endif>Ru</option>
-            <option lang="lang" value="tm" @if($current_locale === 'tm') selected @endif >Tm</option>
         </select>
     </form>
 </div>

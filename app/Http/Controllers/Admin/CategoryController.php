@@ -21,10 +21,14 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
-        Category::create([
-            'name' => $request->name,
-        ]);
-        return redirect()->route('admin.categories.index')->with('success', 'Category is created.');
+        try {
+            Category::create([
+                'name' => $request->name,
+            ]);
+            return redirect()->route('admin.categories.index')->with('success', __('Category is created'));
+        }catch (\Exception $e){
+            dd('Bu at öň bar: ' .  $request->name);
+        }
     }
     public function edit(Category $category)
     {
@@ -35,12 +39,12 @@ class CategoryController extends Controller
     {
         $category->update($request->all());
 
-        return redirect()->route('admin.categories.index')->with('success', 'Category is update.');
+        return redirect()->route('admin.categories.index')->with('success', __('Category is updated'));
     }
 
     public function destroy(Request $request, Category $category)
     {
         $category->delete();
-        return redirect()->route('admin.categories.index')->with('success', 'Category is delete.');
+        return redirect()->route('admin.categories.index')->with('success', __('Category is deleted'));
     }
 }

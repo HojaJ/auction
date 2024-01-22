@@ -60,6 +60,6 @@ class ProfileController extends Controller
     public function topUpBalance()
     {
         User::findOrFail(Auth::id())->increment('balance', 1000);
-        return redirect()->back()->with('success', 'Balance increased.');
+        return redirect()->back()->with('success', __('Balance increased'));
     }
 }

@@ -2,7 +2,7 @@
     <x-slot name="header">
         <div class="flex justify-between">
 
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h2 class="font-semibold text-xl text-white leading-tight">
             {{ __('Categories') }}
         </h2>
         <a href="{{route('admin.categories.create')}}"
@@ -24,7 +24,7 @@
                                 <thead class="bg-gray-50">
                                 <tr>
                                     <th class="px-6 py-3 text-left font-medium text-gray-500">
-                                        Name
+                                         {{ __('Name') }}
                                     </th>
                                     <th class="px-6 py-3"></th>
                                 </tr>

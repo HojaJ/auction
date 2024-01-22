@@ -20,7 +20,7 @@ class LotsController extends Controller
     public function destroy(int $id)
     {
         DeleteService::delete($id);
-        return redirect()->route('admin.lots.index')->with('success', 'Lot delete successfully.');
+        return redirect()->route('admin.lots.index')->with('success', 'Lot is deleted');
     }
 
 }

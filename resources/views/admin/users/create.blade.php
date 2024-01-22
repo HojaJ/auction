@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Add user') }}
+        <h2 class="font-semibold text-xl text-white leading-tight">
+            {{ __('New') }}
         </h2>
     </x-slot>
 
@@ -13,21 +13,21 @@
                     <form action="{{ route('admin.users.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
 
-                        <label for="username">Username</label>
+                        <label for="username">{{ __('Username') }}</label>
                         <input
                             id="username"
                             name="username"
                             class="w-full h-10 px-3 mb-2 text-base text-gray-700 border rounded-lg focus:shadow-outline"
                             type="text"
                             value=""/>
-                        <label for="name">Name</label>
+                        <label for="name">{{ __('Name') }}</label>
                         <input
                             id="name"
                             name="name"
                             class="w-full h-10 px-3 mb-2 text-base text-gray-700 border rounded-lg focus:shadow-outline"
                             type="text"
                             value=""/>
-                        <label for="email">Email</label>
+                        <label for="email">{{ __('Email') }}</label>
                         <input
                             id="email"
                             name="email"
@@ -35,14 +35,14 @@
                             type="text"
                             value=""/>
 
-                        <label for="password">Password</label>
+                        <label for="password">{{ __('Password') }}</label>
                         <input
                                 id="password"
                                 name="password"
                                 class="w-full h-10 px-3 mb-2 text-base text-gray-700 border rounded-lg focus:shadow-outline"
                                 type="text"
                                 value=""/>
-                        <label for="balance">Balance</label>
+                        <label for="balance">{{ __('Balance') }}</label>
                         <input
                                 id="balance"
                                 name="balance"
@@ -58,16 +58,16 @@
 {{--                            {!! Avatar::create($user->name)->toSvg() !!}--}}
 {{--                        @endisset--}}
                         <div class="flex flex-col">
-                            <label for="photo">Profile photo</label>
+                            <label for="photo">{{__('Profile photo')}}</label>
                             <input
                                 id="photo"
                                 name="photo"
-                                class="h-10 px-3 my-2 text-base text-gray-700 focus:shadow-outline"
+                                class="h-10 mt-2  text-base text-gray-700 focus:shadow-outline"
                                 type="file"
                             />
                         </div>
                         <button type="submit" class="flex justify-center items-center h-10 w-32 px-5 mt-3 mr-5 text-gray-100 transition-colors duration-200
-                    bg-green-500 rounded-lg focus:shadow-outline hover:bg-green-600">Save profile</button>
+                    bg-green-500 rounded-lg focus:shadow-outline hover:bg-green-600">{{__('Save')}}</button>
                     </form>
                 </div>
             </div>

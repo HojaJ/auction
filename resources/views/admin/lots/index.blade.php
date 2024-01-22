@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h2 class="font-semibold text-xl text-white leading-tight">
 {{--            {{ __('Lots') }}--}}
         </h2>
     </x-slot>
@@ -16,16 +16,16 @@
                                 <thead class="bg-gray-50">
                                 <tr>
                                     <th class="px-6 py-3 text-left font-medium text-gray-500">
-                                        Name
+                                        {{__('Name')}}
                                     </th>
                                     <th class="px-6 py-3 text-left font-medium text-gray-500">
-                                        Seller
+                                        {{__('Seller')}}
                                     </th>
                                     <th class="px-6 py-3 text-left font-medium text-gray-500">
-                                        Category
+                                        {{__('Category')}}
                                     </th>
                                     <th class="px-6 py-3 text-left font-medium text-gray-500">
-                                        Status
+                                        {{__('Status')}}
                                     </th>
                                     <th class="px-6 py-3"></th>
                                 </tr>
@@ -49,9 +49,8 @@
                                             </div>
                                         </td>
                                         <td class="px-6 py-3">
-                                            <div class="flex justify-center">
-                                                <lot-status-badge class="px-2 py-1 text-xs h-5 font-bold leading-none rounded-full"
-                                                            status="{{ $lot->status }}"></lot-status-badge>
+                                            <div class="text-sm text-gray-900">
+                                                {{ $lot->status_t }}
                                             </div>
                                         </td>
                                         <td class="px-6 py-3">
@@ -81,7 +80,7 @@
                                         </td>
                                     </tr>
                                 @empty
-                                    There are no lots.
+                                    {{__('There are no lots')}}
                                 @endforelse
                                 </tbody>
                             </table>

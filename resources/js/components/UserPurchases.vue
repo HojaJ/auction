@@ -10,7 +10,7 @@
             <div v-for="purchase in purchases" class="grid grid-cols-4 px-2 py-3 hover:bg-green-100">
                 <span>{{ purchase.lot_name }}</span>
                 <span>{{ purchase.seller }}</span>
-                <span>${{ purchase.price }}</span>
+                <span>{{ purchase.price }} TMT</span>
                 <span>{{ purchase.created_at }}</span>
             </div>
             <div class="flex mt-4">

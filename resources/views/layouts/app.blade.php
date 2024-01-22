@@ -49,7 +49,7 @@
                     <a href="{{ route('home') }}">
                         <img src="{{ asset('logo.png') }}" alt="Logo" class="block h-10 w-auto fill-current text-gray-600">
                     </a>
-                    <p>Copyright © 2023 Auction</p>
+                    <p>Copyright © 2024 Auction</p>
                 </div>
             </footer>
         </div>

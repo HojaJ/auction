@@ -36,7 +36,7 @@ class UsersController extends Controller
             'balance' => $request->balance,
             'photo' => $photo
         ]);
-        return redirect()->route('admin.users.index')->with('success', 'User is created.');
+        return redirect()->route('admin.users.index')->with('success', __(__('User is created')));
     }
     public function edit(User $user)
     {
@@ -57,7 +57,7 @@ class UsersController extends Controller
 
         $user->update($request->all());
 
-        return redirect()->route('admin.users.index')->with('success', 'User is update.');
+        return redirect()->route('admin.users.index')->with('success', __('User is updated'));
     }
 
     public function destroy(Request $request, User $user)
@@ -66,6 +66,6 @@ class UsersController extends Controller
             Storage::disk('local')->delete('public/' . $user->photo);
         }
         $user->delete();
-        return redirect()->route('admin.users.index')->with('success', 'User is delete.');
+        return redirect()->route('admin.users.index')->with('success', __('User is deleted'));
     }
 }

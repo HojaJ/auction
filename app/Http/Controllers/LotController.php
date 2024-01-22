@@ -38,7 +38,7 @@ class LotController extends Controller
     public function store(StoreService $service)
     {
         $service->storeLot();
-        return redirect()->route('lots.index')->with('success', 'Lot created successfully.');
+        return redirect()->route('lots.index')->with('success', __('Lot is created'));
     }
 
     /**
@@ -64,7 +64,7 @@ class LotController extends Controller
     public function update(StoreService $service, int $id)
     {
         $service->updateLot($id);
-        return redirect()->route('lots.show', $id)->with('success', 'Lot update successfully.');
+        return redirect()->route('lots.show', $id)->with('success', __('Lot is updated'));
     }
 
     /**
@@ -73,7 +73,7 @@ class LotController extends Controller
     public function destroy(int $id)
     {
         DeleteService::delete($id);
-        return redirect()->route('lots.index')->with('success', 'Lot delete successfully.');
+        return redirect()->route('lots.index')->with('success', __('Lot is deleted'));
     }
 
     public function getMaxBid(Request $request)

@@ -52,7 +52,7 @@
             <div class="mt-3">
                 <span class="block font-medium text-sm text-gray-700">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
-                {{ __('Don’t have an account?') }}</a>
+                    {{ __('Don’t have an account?') }}</a>
                 </span>
             </div>
         @endif

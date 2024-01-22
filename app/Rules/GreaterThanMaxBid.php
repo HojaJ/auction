@@ -24,6 +24,6 @@ class GreaterThanMaxBid implements Rule
 
     public function message()
     {
-        return "The bid must be greater than $this->currentMaxBid";
+        return __('The bid must be greater than: ') . $this->currentMaxBid;
     }
 }
